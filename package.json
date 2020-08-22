@@ -4,6 +4,7 @@
   "description": "A tutorial on how to create a portfolio using Gatsby",
   "main": "index.js",
   "scripts": {
+    "run": "gatsby develop -p 9090 -o",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "gatsby": "^2.24.47",
+    "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
