@@ -1,0 +1,21 @@
+{
+  "name": "gatsby-tutorial",
+  "version": "1.0.0",
+  "description": "A tutorial on how to create a portfolio using Gatsby",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gatsby",
+    "framer",
+    "tailwind"
+  ],
+  "author": "Dan Norris",
+  "license": "ISC",
+  "dependencies": {
+    "gatsby": "^2.24.47",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
