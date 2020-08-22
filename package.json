@@ -16,8 +16,12 @@
   "license": "ISC",
   "dependencies": {
     "gatsby": "^2.24.47",
-    "prettier": "^2.0.5",
+    "gatsby-plugin-postcss": "^2.3.11",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5",
+    "tailwindcss": "^1.7.3"
   }
 }
