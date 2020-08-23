@@ -1,5 +1,10 @@
 import React from 'react'
+import Layout from '../components/Layout'
 
 export default () => {
-    return <div class="bg-blue-300 text-3xl p-4">My Portfolio</div>
+    return (
+        <Layout>
+            <main>This is the hero section.</main>
+        </Layout>
+    )
 }
