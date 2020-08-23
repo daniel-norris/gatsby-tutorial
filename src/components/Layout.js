@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Header from '../components/Header'
 
 const Layout = ({ children }) => {
     return (
@@ -9,7 +10,7 @@ const Layout = ({ children }) => {
                 gridTemplateRows: 'auto 1fr auto',
             }}
         >
-            <header>My Portfolio</header>
+            <Header />
             <div className="mx-auto">
                 <main>{children}</main>
             </div>
