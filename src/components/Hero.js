@@ -10,12 +10,12 @@ const Hero = ({ content }) => {
     return (
         <div className="flex items-center bg-pattern shadow-inner min-h-screen">
             <div className="bg-white w-full py-6 shadow-lg">
-                <section class="mx-auto container w-4/5">
+                <section class="mx-auto container w-3/5">
                     <h1 className="uppercase font-bold text-lg text-red-500">
                         {frontmatter.intro}
                     </h1>
                     <h2 className="font-bold text-6xl">{frontmatter.title}</h2>
-                    <p className="font-thin text-2xl w-3/5">
+                    <p className="font-thin text-2xl w-4/5">
                         <MDXRenderer>{body}</MDXRenderer>
                     </p>
 

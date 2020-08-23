@@ -1,20 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { MDXProvider } from '@mdx-js/react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const Layout = ({ children }) => {
     return (
-        <div
-            className="min-h-full grid"
-            style={{
-                gridTemplateRows: 'auto 1fr auto',
+        <MDXProvider
+            components={{
+                p: (props) => <p {...props} className="mt-4" />,
             }}
         >
-            <Header />
-            <main>{children}</main>
-            <Footer />
-        </div>
+            <div
+                className="min-h-full grid"
+                style={{
+                    gridTemplateRows: 'auto 1fr auto',
+                }}
+            >
+                <Header />
+                <main>{children}</main>
+                <Footer />
+            </div>
+        </MDXProvider>
     )
 }
 
