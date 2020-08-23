@@ -5,6 +5,7 @@ import IconLinkedin from './Linkedin'
 import IconMedium from './Medium'
 import IconDev from './Dev'
 import IconTwitter from './Twitter'
+import IconExternal from './External'
 
 const Icon = ({ name, color }) => {
     switch (name.toLowerCase()) {
@@ -18,6 +19,8 @@ const Icon = ({ name, color }) => {
             return <IconMedium color={color} />
         case 'twitter':
             return <IconTwitter color={color} />
+        case 'external':
+            return <IconExternal color={color} />
         default:
             return null
     }
