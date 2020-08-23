@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 const Layout = ({ children }) => {
     return (
         <div
-            className="mt-6 min-h-full grid"
+            className="min-h-full grid"
             style={{
                 gridTemplateRows: 'auto 1fr auto',
             }}

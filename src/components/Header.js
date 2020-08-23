@@ -12,7 +12,10 @@ const Header = () => {
             style={{ padding: '2rem 6rem' }}
         >
             <Link to="/" aria-label="home">
-                <h1 className="text-3xl font-bold">{siteShortTitle}</h1>
+                <h1 className="text-3xl font-bold">
+                    {siteShortTitle}
+                    <span className="text-red-500">.</span>
+                </h1>
             </Link>
             <nav className="flex items-center">
                 {menu.map(({ name, url }, key) => {

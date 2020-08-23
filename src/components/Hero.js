@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { navLinks, socialMedia } from '../config/index'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { navLinks } from '../config/index'
 
 const Hero = ({ content }) => {
+    const { frontmatter, body } = content[0].node
     const { button } = navLinks
 
     return (
@@ -10,13 +12,11 @@ const Hero = ({ content }) => {
             <div className="bg-white w-full py-6 shadow-lg">
                 <section class="mx-auto container w-4/5">
                     <h1 className="uppercase font-bold text-lg text-red-500">
-                        Hi, my name is
+                        {frontmatter.intro}
                     </h1>
-                    <h2 className="font-bold text-6xl">Dan Norris</h2>
-                    <p className=" text-2xl w-3/5">
-                        I’m a Software Engineer based in Bristol, UK
-                        specialising in building incredible websites and
-                        applications.
+                    <h2 className="font-bold text-6xl">{frontmatter.title}</h2>
+                    <p className="font-thin text-2xl w-3/5">
+                        <MDXRenderer>{body}</MDXRenderer>
                     </p>
 
                     <Link to={button.url}>
