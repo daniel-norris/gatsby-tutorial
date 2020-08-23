@@ -7,10 +7,7 @@ const Header = () => {
     const { menu } = navLinks
 
     return (
-        <header
-            className="flex items-center justify-between"
-            style={{ padding: '2rem 6rem' }}
-        >
+        <header className="flex items-center justify-between py-2 px-1 sm:py-6 sm:px-12 border-t-4 border-red-500">
             <Link to="/" aria-label="home">
                 <h1 className="text-3xl font-bold">
                     {siteShortTitle}

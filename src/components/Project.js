@@ -5,19 +5,27 @@ import Img from 'gatsby-image'
 
 const Project = ({ content }) => {
     return (
-        <section id="project" className="my-8 w-3/5 mx-auto">
+        <section id="projects" className="my-8 w-4/5 md:w-3/5 mx-auto">
             {content.map((project, key) => {
                 const { body, frontmatter } = project.node
 
                 return (
-                    <div className="py-8 flex" key={frontmatter.position}>
-                        <div className="w-1/3">
+                    <div className="py-8 md:flex" key={frontmatter.position}>
+                        <div className="md:w-1/3 mr-4">
                             <h1 className="text-xs font-bold uppercase text-red-500">
                                 {frontmatter.category}
                             </h1>
                             <h2 className="text-3xl font-bold mb-6">
                                 {frontmatter.title}
                             </h2>
+                            <div className="md:hidden">
+                                <Img
+                                    fluid={
+                                        frontmatter.screenshot.childImageSharp
+                                            .fluid
+                                    }
+                                />
+                            </div>
                             <div className=" font-light text-lg flex justify-between">
                                 <div>
                                     <MDXRenderer>{body}</MDXRenderer>
@@ -47,7 +55,7 @@ const Project = ({ content }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full py-6">
+                        <div className="hidden md:block w-full py-6">
                             <Img
                                 fluid={
                                     frontmatter.screenshot.childImageSharp.fluid

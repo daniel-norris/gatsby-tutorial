@@ -7,9 +7,9 @@ const Contact = ({ content }) => {
     return (
         <section
             id="contact"
-            className="mt-6 flex flex-col items-center justify-center w-3/5 mx-auto min-h-screen"
+            className="mt-6 flex flex-col items-center justify-center w-4/5 sm:w-3/5 mx-auto min-h-screen"
         >
-            <div className="w-1/2">
+            <div className="sm:w-1/2">
                 <h3 className="text-5xl font-bold mb-6 text-center">
                     {frontmatter.title}
                 </h3>
