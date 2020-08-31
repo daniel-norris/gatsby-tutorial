@@ -5,8 +5,6 @@ import Layout from '../components/Layout'
 export default ({ data }) => {
     const { frontmatter, body, timeToRead } = data.mdx
 
-    console.log(timeToRead)
-
     return (
         <Layout>
             <section
