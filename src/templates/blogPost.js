@@ -3,7 +3,9 @@ import React from 'react'
 import Layout from '../components/Layout'
 
 export default ({ data }) => {
-    const { frontmatter, body } = data.mdx
+    const { frontmatter, body, timeToRead } = data.mdx
+
+    console.log(timeToRead)
 
     return (
         <Layout>
@@ -18,8 +20,10 @@ export default ({ data }) => {
                     <p className="text-base text-gray-600">
                         {frontmatter.date}
                     </p>
+                    <p className="text-base text-gray-600">
+                        {timeToRead} min read
+                    </p>
                 </div>
-
                 <div className="mt-8 text-base font-light">
                     <MDXRenderer>{body}</MDXRenderer>
                 </div>
@@ -33,6 +37,7 @@ export const pageQuery = graphql`
         mdx(id: { eq: $id }) {
             id
             body
+            timeToRead
             frontmatter {
                 title
                 date(formatString: "Do MMM YYYY")
