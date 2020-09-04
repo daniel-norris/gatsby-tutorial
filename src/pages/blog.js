@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Post from '../components/Post'
+import FeaturedPost from '../components/FeaturedPost'
 
 const Blog = ({ data }) => {
     return (
@@ -16,6 +17,7 @@ const Blog = ({ data }) => {
                     draft crow's nest strike colors bounty lad ballast.
                 </p>
             </section>
+            <FeaturedPost cta={false} content={data.posts.edges} />
             <Post content={data.posts.edges} />
         </Layout>
     )
@@ -25,6 +27,29 @@ export default Blog
 
 export const query = graphql`
     {
+        featured: allMdx(
+            filter: {
+                fileAbsolutePath: { regex: "/posts/" }
+                frontmatter: { published: { eq: true }, featured: { eq: true } }
+            }
+            sort: { order: DESC, fields: frontmatter___date }
+        ) {
+            edges {
+                node {
+                    fields {
+                        slug
+                    }
+                    frontmatter {
+                        date(formatString: "Do MMM")
+                        title
+                    }
+                    excerpt(pruneLength: 100)
+                    id
+                    body
+                    timeToRead
+                }
+            }
+        }
         posts: allMdx(
             filter: {
                 fileAbsolutePath: { regex: "/posts/" }
