@@ -22,7 +22,7 @@ This isn't a Gatsby starter, although you are welcome to use the GitHub reposito
 
 We'll cover the following during the tutorial:
 
-Part 1
+**Part 1**
 
 -   Setting up
 -   Configuring Tailwind CSS
@@ -40,22 +40,21 @@ Part 1
 -   Deployment using Netlify
 -   Summary
 
-Part 2 is yet to be completed but will cover how to incorporate a blog into your portfolio site using MDX with code blocks, syntax highlighting and other features.
+**Part 2**
 
-Part 2
-
--   Why a blog?
+-   Why MDX?
 -   What are you going to build?
--   Set up file system plugin
--   Set up MDX plugin
--   Create a new blog page
--   Create your first blog article
--   Create slugs for MDX blog posts
--   Create a featured posts section
+-   Create a blog page
+-   Configure the Gatsby `filesystem` plugin
+-   Create your first MDX blog articles
+-   Create slugs for your MDX blog posts
+-   Programmatically create your MDX pages using the `createPages` API
+-   Create a blog post template
 -   Dynamically show article read times
--   Configure MDX styles
+-   Make an index of blog posts
+-   Create a featured posts section
+-   Customise your MDX components
 -   Add syntax highlighting for code blocks
--   Add a copy to clipboard hook
--   Add cover images to blog posts
--   Add Google analytics
--   Finishing up
+-   Add a featured image to blog posts
+-   Add Google Analytics
+-   Summary
