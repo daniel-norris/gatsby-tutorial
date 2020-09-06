@@ -17,7 +17,7 @@ const Blog = ({ data }) => {
                     draft crow's nest strike colors bounty lad ballast.
                 </p>
             </section>
-            <FeaturedPost cta={false} content={data.posts.edges} />
+            <FeaturedPost cta={false} content={data.featured.edges} />
             <Post content={data.posts.edges} />
         </Layout>
     )

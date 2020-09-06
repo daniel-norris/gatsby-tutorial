@@ -5,6 +5,13 @@ module.exports = {
         `gatsby-transformer-sharp`,
         `gatsby-plugin-mdx`,
         {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+                trackingId: 'UA-XXXXXXXXX-X',
+            },
+        },
+        {
             resolve: `gatsby-plugin-mdx`,
             options: {
                 extensions: [`.mdx`, `.md`],
