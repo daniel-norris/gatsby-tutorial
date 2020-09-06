@@ -2,6 +2,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
 import Layout from '../components/Layout'
+import Img from 'gatsby-image'
 
 export default ({ data }) => {
     const { frontmatter, body, timeToRead } = data.mdx
@@ -64,6 +65,14 @@ export default ({ data }) => {
                             {timeToRead} min read
                         </p>
                     </div>
+                    {frontmatter.cover ? (
+                        <div className="my-8 shadow-md">
+                            <Img
+                                style={{ height: '30vh' }}
+                                fluid={frontmatter.cover.childImageSharp.fluid}
+                            />
+                        </div>
+                    ) : null}
                     <div className="mt-8 text-base font-light">
                         <MDXRenderer>{body}</MDXRenderer>
                     </div>
@@ -82,6 +91,13 @@ export const pageQuery = graphql`
             frontmatter {
                 title
                 date(formatString: "Do MMM YYYY")
+                cover {
+                    childImageSharp {
+                        fluid(traceSVG: { color: "#F56565" }) {
+                            ...GatsbyImageSharpFluid_tracedSVG
+                        }
+                    }
+                }
             }
         }
     }
